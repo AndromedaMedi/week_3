@@ -1,0 +1,47 @@
+body{
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 0
+}
+
+body > footer{
+    background-color: dodgerblue
+}
+
+body > footer{
+    padding: 16px;
+    background-color: dodgerblue;
+    color: white;
+    text-align: center
+}
+
+body> footer > section > nav > ul > li > a{
+    background-color: dodgerblue;
+    color: white
+
+}
+
+body > header{
+    background-color: dodgerblue;
+    color: white
+}
+#logo{
+    margin: 0;
+    font-family: "Rubic Microbe", sans-serif
+}
+
+body > main > article{
+    margin: auto;
+    width: 70%;
+
+}
+
+.like-button{
+    background-color: transparent;
+    border: 1px solid dodgerblue
+}
+
+.share-button{
+    background-color: transparent;
+    border: 1px solid green;
+
+}

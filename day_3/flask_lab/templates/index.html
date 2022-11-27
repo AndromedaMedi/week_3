@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>{{ title }} - Bakery Orders</title>
+    </head>
+    <body> 
+        <h1>Bakery Orders</h1>
+        <ul>
+            {% for order in orders %}
+                <li>
+                    Customer: {{ order.customer_name}}, 
+                    Order Date: {{ order.order_date }}, 
+                    Item: {{ order.food_item }}, 
+                    Flavour: {{ order.flavour }},
+                    Quantity: {{ order.quantity }}
+                    <a href="/orders/{{orders.index(order)}}">Show Order</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>

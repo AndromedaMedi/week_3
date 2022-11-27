@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="book-covers">
+    <div class="book-cover">
+        <img src="static/book1.jpg" alt="book1" width="300" height="460"> 
+    </div>
+    <div class="book-cover">
+        <img src="static/book2.jpg" alt="book2" width="300" height="460">
+    </div>
+    <div class="book-cover">
+        <img src="static/book3.jpg" alt="book3" width="300" height="460">
+    </div>
+</section>
+    <h2>Books</h2>
+        <ul>
+            {% for book in books %}
+            <div class="books">
+            <li>
+                <h3> {{ book.title }}</h3>
+                <h4>Author:</h4>
+                <p> {{ book.author }}</p>
+                <h4>Genre:</h4>
+                <p> {{ book.genre }}</p>
+                <h4>Available:</h4>
+                <p>
+                    {% if book.checked_out %}
+                        No
+                    {% else %}
+                        Yes
+                    {% endif %}
+                </p>
+                <a href="/books/{{loop.index0}}">Read more</a>
+                <p>
+                <input type="submit" value="Delete Book">
+                </p>
+            </li>
+            </div>
+            {% endfor %}
+        </ul>
+    </div>    
+{% endblock %}

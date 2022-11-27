@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+        <h3>{{ book.title }}</h3>
+        <h4>Author:</h4>
+        <p> {{ book.author }}</p>
+        <h4>Genre:</h4>
+        <p> {{ book.genre }}</p>
+        <h4>Available:</h4>
+        <p> 
+            {% if book.checked_out %}
+                No
+            {% else %}
+                Yes
+            {% endif %}
+        </p>
+        <h4>Details:</h4>
+        <section id="book_details">
+            <p> {{ text }}</p>
+        </section>
+
+{% endblock %}
